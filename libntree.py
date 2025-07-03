@@ -5,16 +5,17 @@ parser.add_argument("path", help="Root directory to display")
 parser.add_argument("--depth", type=int, default=-1, help="Max depth to traverse (-1 = unlimited)")
 parser.add_argument("--show-hidden", action="store_true", help="Include hidden files")
 parser.add_argument("--output", help="Save output to file")
+parser.add_argument("--ztoa",action="store_true",)
 args = parser.parse_args()
 
 def main():
-    print_tree(args.path,max_depth= - args.depth)
+    print_tree(args.path,max_depth= args.depth)
 
 def print_tree(path,prefix="",depth=0,max_depth=-1):
     if max_depth != -1 and depth > max_depth:
         return
 
-    for i,entry in enumerate(sorted(os.listdir(path))):
+    for i,entry in enumerate(sorted(os.listdir(path),reverse=True if args.ztoa else False)):
         if not args.show_hidden and entry[0] == '.':
             continue
         
