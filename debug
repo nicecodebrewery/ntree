@@ -1,0 +1,6 @@
+#!/usr/bin/env python3.12
+
+from ntree.libntree import main
+
+
+main()
