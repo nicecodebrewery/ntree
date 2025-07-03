@@ -21,16 +21,16 @@ A modern, feature-rich replacement for the classic Linux `tree` command — writ
 
 ## 📦 Installation
 
-Install it via **pip** from [PyPI](https://pypi.org/project/better-tree):
+Install it via **pip** from [PyPI](https://pypi.org/project/ntree):
 
 ```bash
-pip install better-tree
+pip install ntree
 ```
 
 
 ## 🛠️ Usage
 
-better-tree [OPTIONS] <path>
+ntree [OPTIONS] <path>
 
 ## 🔧 Options
 
@@ -48,7 +48,7 @@ better-tree [OPTIONS] <path>
 
 ## 📂 Example
 ```bash
-better-tree ~/projects/myapp --depth 2 --meta --show-hidden -e py -o tree.txt
+ntree ~/projects/myapp --depth 2 --meta --show-hidden -e py -o tree.txt
 ```
 This will:
 - Traverse up to 2 levels deep
