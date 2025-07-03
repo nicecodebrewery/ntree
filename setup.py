@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="ntree",
-    version="0.1.0",
+    version="0.1.1",
     description="A better version of the Linux tree command in Python",
     author="Vijay Satheesh",
     packages=find_packages(),

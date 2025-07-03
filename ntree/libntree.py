@@ -20,6 +20,10 @@ def main():
     global dumpfile
     if args.o != "":
         dumpfile = open(args.o,"a")
+    
+    if not os.path.isdir(args.path):
+        print("Not a directory")
+        return
     print_tree(args.path,max_depth= args.depth)
     if dumpfile != None:
         dumpfile.close()
